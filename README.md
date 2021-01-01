@@ -1,46 +1,18 @@
-# Getting Started with Create React App
+# Formula Input
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Introduction
+This project builds a *FormulaInput* in React, which provides a content-editable \<DIV> with the following special treatment of text inside the \<DIV>:
+* Variable names, i.e. text between square brackets, are highlighted in a special color
+* Pressing the delete or backspace key on a variable deletes the entire variable (rather than just one character).
+* Editing of variable names is disallowed, i.e. keystrokes issued while inside a variable name are ignored.
+* When copying formula fragments from the FormulaInput component, the fragment is automatically extended to cover entire variable names
+* When copying formulas into the FormulaInput component, the formula is automaticaly restyled to highlight variables.
 
-## Available Scripts
+The *FormulaInput* component was successfully manually tested on a MacBook, Ubuntu and Windows laptop in Chromium-based browsers (Chrome, Edge, Brave) and on a MacBook in FireFox. It does not work in Safari.
 
-In the project directory, you can run:
+My reason for doing this project was experimenting with the *content-editable* property for HTML elements and with direct DOM manipulation of a React component. Alas, the *content-editable* feature is notoriously difficult in that support across browsers is inconsistent. 
 
-### `yarn start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
+## Getting started
+This project was created as a [React app with TypeScript support](https://create-react-app.dev/docs/adding-typescript/) and uses *styled components*. After cloning the project, you will need to run `yarn install` and then `yarn start` to start the development server.
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
 To learn React, check out the [React documentation](https://reactjs.org/).
